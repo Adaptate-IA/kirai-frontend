@@ -1,11 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const BASE_COUNT = 12;
 
 type Status = "idle" | "loading" | "success";
 
 export default function Waitlist() {
   const [status, setStatus] = useState<Status>("idle");
+  const [count, setCount] = useState(BASE_COUNT);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("kirai_count");
+    if (saved) setCount(Number(saved));
+  }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -22,7 +30,14 @@ export default function Waitlist() {
       body: JSON.stringify({ email, name, budget }),
     });
 
-    setStatus(res.ok ? "success" : "idle");
+    if (res.ok) {
+      const next = count + 1;
+      setCount(next);
+      try { localStorage.setItem("kirai_count", String(next)); } catch {}
+      setStatus("success");
+    } else {
+      setStatus("idle");
+    }
   }
 
   return (
@@ -96,7 +111,7 @@ export default function Waitlist() {
           )}
 
           <p className="waitlist-counter" aria-live="polite">
-            <strong>12 personas</strong> ya están en la lista
+            <strong>{count} personas</strong> ya están en la lista
           </p>
           {/* <a href="https://wa.me/569XXXXXXXX" className="waitlist-whatsapp" target="_blank" rel="noopener noreferrer">
             ¿Prefieres hablar? Escríbenos por WhatsApp →
