@@ -16,9 +16,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://adaptate-ia.com/#org",
+      "@id": "https://kirai.cl/#org",
       name: "Adaptate IA",
-      url: "https://adaptate-ia.com",
+      url: "https://kirai.cl",
       description:
         "Agentes de IA para negocios que se adaptan. Creadores de Kirai, experta en marketing digital con IA.",
     },

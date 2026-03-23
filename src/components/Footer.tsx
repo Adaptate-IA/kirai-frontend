@@ -9,9 +9,9 @@ export default function Footer() {
           Santiago, Chile — Agentes de IA para negocios que se adaptan.
         </p>
         <div className="footer-links">
-          <a href="#">Privacidad</a>
-          <a href="#">Términos</a>
-          <a href="#">contacto@adaptate-ia.com</a>
+          <a href="/privacidad">Privacidad</a>
+          <a href="/terminos">Términos</a>
+          <a href="mailto:contacto@adaptate-ia.com">contacto@adaptate-ia.com</a>
         </div>
         <p className="footer-meta" style={{ marginTop: "16px" }}>
           © 2026 Adaptate IA. Todos los derechos reservados.

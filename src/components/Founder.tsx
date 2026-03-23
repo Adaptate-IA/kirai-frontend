@@ -6,7 +6,7 @@ export default function Founder() {
           <div className="founder-text">
             <h3>Hola, soy Matías.</h3>
             <p>
-              Trabajo en IA y me gusta hacer Agentes. Estoy construyendo Kirai
+              Trabajo en IA y me gusta hacer agentes. Estoy construyendo Kirai
               porque cuando quise promocionar mis propios servicios, me di cuenta
               de lo difícil que es manejar campañas de anuncios sin ser experto:
               gastas plata, no entiendes los reportes, y no tienes a quién preguntarle

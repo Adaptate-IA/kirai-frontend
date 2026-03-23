@@ -49,6 +49,17 @@ export default function Waitlist() {
               onSubmit={handleSubmit}
               aria-label="Formulario de lista de espera"
             >
+              <label htmlFor="waitlist-name" className="sr-only">
+                Tu nombre
+              </label>
+              <input
+                id="waitlist-name"
+                type="text"
+                placeholder="Tu nombre"
+                autoComplete="name"
+                disabled={status === "loading"}
+              />
+
               <label htmlFor="waitlist-email" className="sr-only">
                 Tu email *
               </label>
@@ -58,17 +69,6 @@ export default function Waitlist() {
                 placeholder="Tu email *"
                 autoComplete="email"
                 required
-                disabled={status === "loading"}
-              />
-
-              <label htmlFor="waitlist-name" className="sr-only">
-                Tu nombre
-              </label>
-              <input
-                id="waitlist-name"
-                type="text"
-                placeholder="Tu nombre"
-                autoComplete="name"
                 disabled={status === "loading"}
               />
 
@@ -98,9 +98,9 @@ export default function Waitlist() {
           <p className="waitlist-counter" aria-live="polite">
             <strong>12 personas</strong> ya están en la lista
           </p>
-          <a href="#" className="waitlist-whatsapp" rel="noopener noreferrer">
+          {/* <a href="https://wa.me/569XXXXXXXX" className="waitlist-whatsapp" target="_blank" rel="noopener noreferrer">
             ¿Prefieres hablar? Escríbenos por WhatsApp →
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

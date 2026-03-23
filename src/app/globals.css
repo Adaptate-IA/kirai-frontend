@@ -643,6 +643,17 @@ footer {
 }
 .footer-links a:hover { color: var(--text); }
 
+/* ── Legal pages ──────────────────────────────────────────── */
+main h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 32px 0 10px;
+}
+main p { font-size: 15px; color: var(--text2); line-height: 1.7; margin-bottom: 12px; }
+main a { color: var(--accent); text-decoration: none; }
+main a:hover { text-decoration: underline; }
+
 /* ── Accessibility utilities ──────────────────────────────── */
 .sr-only {
   position: absolute;

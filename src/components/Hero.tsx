@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="hero" id="main-content">
       <div className="container">
-        <div className="hero-badge">Solo 50 lugares — precio de lanzamiento bloqueado</div>
+        <div className="hero-badge">Solo 50 lugares con 50% off</div>
         <h1>
           Deja de adivinar con tus ads.{" "}
           <em>Kirai te dice qué cambiar, cada día.</em>

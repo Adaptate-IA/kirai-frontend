@@ -28,17 +28,21 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
+  metadataBase: new URL("https://kirai.cl"),
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
     type: "website",
+    url: "https://kirai.cl",
     locale: "es_CL",
     siteName: "Kirai by Adaptate IA",
+    images: [{ url: "/og-kirai.png", width: 1200, height: 630, alt: "Kirai — Tu experta en marketing digital con IA" }],
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
+    images: ["/og-kirai.png"],
   },
   robots: {
     index: true,
